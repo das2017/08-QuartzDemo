@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<job-scheduling-data xmlns="http://quartznet.sourceforge.net/JobSchedulingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+
+  <processing-directives>
+    <overwrite-existing-data>true</overwrite-existing-data>
+  </processing-directives>
+
+  <schedule>
+
+    <!--简单触发器触发的job-->
+    <job>
+      <name>PolicySimpleJob1</name>
+      <group>PolicyGroup</group>
+      <description>政策同步服务</description>
+      <job-type>QuartzNetJobs.SimpleJob, QuartzNetJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <simple>
+        <name>PolicyTrigger1</name>
+        <group>SimpleTrigger</group>
+        <job-name>PolicySimpleJob1</job-name>
+        <job-group>PolicyGroup</job-group>
+        <repeat-count>3</repeat-count> <!--设置为-1表示无限执行下去-->
+        <repeat-interval>4000</repeat-interval> <!--表示每隔4秒被执行一次-->
+      </simple>
+    </trigger>
+
+    <!-- Cron触发器触发的job-->
+    <job>
+      <name>PolicySyncJob1</name>
+      <group>PolicyGroup</group>
+      <description>政策同步服务</description>
+      <job-type>QuartzNetJobs.PolicySyncJob, QuartzNetJobs</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>PolicyTrigger2</name>
+        <group>CronTrigger</group>
+        <job-name>PolicySyncJob1</job-name>
+        <job-group>PolicyGroup</job-group>
+        <cron-expression>0/5 * * * * ?</cron-expression> <!--表示每隔5秒被执行一次-->
+      </cron>
+    </trigger>
+
+  </schedule>
+
+</job-scheduling-data>

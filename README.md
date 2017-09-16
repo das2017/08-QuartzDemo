@@ -1,2 +1,2 @@
-# QuartzNetDemo
-QuartzNet Demo
+# QuartzDemo
+Quartz Demo

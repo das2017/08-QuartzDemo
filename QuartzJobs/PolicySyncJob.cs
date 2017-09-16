@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace QuartzNetJobs
+namespace QuartzJobs
 {
     /// <summary>
     /// 政策同步任务

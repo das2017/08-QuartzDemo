@@ -4,7 +4,7 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 
-namespace QuartzNetDemo.WindowsService
+namespace QuartzDemo.WindowsService
 {
     static class Program
     {

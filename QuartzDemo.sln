@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzNetDemo", "QuartzNetDemo\QuartzNetDemo.csproj", "{5A7C2ADF-8175-4545-8A45-1F4C2CDD3368}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{C8D56201-BC41-427E-8DDC-60E79AF5D774}"
 	ProjectSection(SolutionItems) = preProject
 		References\Common.Logging.Core.dll = References\Common.Logging.Core.dll
@@ -15,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", 
 		References\Quartz.xml = References\Quartz.xml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzNetJobs", "QuartzNetJobs\QuartzNetJobs.csproj", "{088966EC-0856-49B4-8747-27F328AAEE48}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzDemo", "QuartzDemo\QuartzDemo.csproj", "{5A7C2ADF-8175-4545-8A45-1F4C2CDD3368}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzNetDemo.WindowsService", "QuartzNetDemo.WindowsService\QuartzNetDemo.WindowsService.csproj", "{707BFD3F-316D-4CC2-98A6-2299872C455E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzJobs", "QuartzJobs\QuartzJobs.csproj", "{088966EC-0856-49B4-8747-27F328AAEE48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzDemo.WindowsService", "QuartzDemo.WindowsService\QuartzDemo.WindowsService.csproj", "{707BFD3F-316D-4CC2-98A6-2299872C455E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

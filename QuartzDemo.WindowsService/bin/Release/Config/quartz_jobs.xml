@@ -13,7 +13,7 @@
       <name>PolicySimpleJob1</name>
       <group>PolicyGroup</group>
       <description>政策同步服务</description>
-      <job-type>QuartzNetJobs.SimpleJob, QuartzNetJobs</job-type>
+      <job-type>QuartzJobs.SimpleJob, QuartzJobs</job-type>
       <durable>true</durable>
       <recover>false</recover>
     </job>
@@ -33,7 +33,7 @@
       <name>PolicySyncJob1</name>
       <group>PolicyGroup</group>
       <description>政策同步服务</description>
-      <job-type>QuartzNetJobs.PolicySyncJob, QuartzNetJobs</job-type>
+      <job-type>QuartzJobs.PolicySyncJob, QuartzJobs</job-type>
       <durable>true</durable>
       <recover>false</recover>
     </job>

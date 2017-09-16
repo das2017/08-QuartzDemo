@@ -3,7 +3,7 @@ using Quartz;
 using System;
 using System.Threading;
 
-namespace QuartzNetJobs
+namespace QuartzJobs
 {
     /// <summary>
     /// 简单任务

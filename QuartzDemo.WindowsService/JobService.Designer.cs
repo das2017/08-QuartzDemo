@@ -1,4 +1,4 @@
-﻿namespace QuartzNetDemo.WindowsService
+﻿namespace QuartzDemo.WindowsService
 {
     partial class JobService
     {

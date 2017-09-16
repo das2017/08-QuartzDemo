@@ -2,11 +2,11 @@
 using Quartz;
 using Quartz.Impl;
 using Quartz.Impl.Calendar;
-using QuartzNetJobs;
+using QuartzJobs;
 using System;
 using System.Threading;
 
-namespace QuartzNetDemo
+namespace QuartzDemo
 {
     class Program
     {
@@ -25,9 +25,9 @@ namespace QuartzNetDemo
             //JobWithManyTriggerDemo();
 
             //CalendarDemo();
-            
-            CurrentSched.Start();  //开启调度器
+
             log.Info("------- 开始计划 -----------------");
+            CurrentSched.Start();  //开启调度器            
 
             log.Info("------- 等待20秒-----------------");
             Thread.Sleep(TimeSpan.FromSeconds(20));            
@@ -55,7 +55,7 @@ namespace QuartzNetDemo
         {
             IJobDetail simpleJob = JobBuilder.Create<SimpleJob>().WithIdentity("任务名称2", "任务组名").Build();    //创建一个任务
             ITrigger cronTrigger = TriggerBuilder.Create().WithIdentity("触发器名称2", "触发器组名").StartNow()
-                .WithCronSchedule("2/10 * * ? * *").Build();   //创建一个Cron触发器，每隔10秒执行一次，即触发的时刻是02s、12s、22s、32s、42s、52s
+                .WithCronSchedule("2/10 * * ? * *").Build();   //创建一个Cron触发器，每隔10秒执行一次，触发的时刻：02s、12s、22s、32s、42s、52s
 
             CurrentSched.ScheduleJob(simpleJob, cronTrigger);    //把任务、Cron触发器加入调度器
         }
@@ -65,11 +65,11 @@ namespace QuartzNetDemo
         /// </summary>
         private static void JobWithManyTriggerDemo()
         {
-            IJobDetail simpleJob = JobBuilder.Create<SimpleJob>().WithIdentity("任务名称", "任务组名").Build();    //创建一个任务
+            IJobDetail simpleJob = JobBuilder.Create<SimpleJob>().WithIdentity("任务名称", "任务组名").Build();    //创建一个simpleJob任务
             ITrigger simpleTrigger = TriggerBuilder.Create().WithIdentity("触发器名称3", "触发器组名").StartNow()
                 .WithSimpleSchedule(x => x.WithIntervalInSeconds(5).RepeatForever()).Build();   //创建一个简单触发器，每隔5秒执行一次
 
-            CurrentSched.ScheduleJob(simpleJob, simpleTrigger);    //把任务、简单触发器加入调度器
+            CurrentSched.ScheduleJob(simpleJob, simpleTrigger);    //把simpleJob任务、简单触发器加入调度器
 
             ITrigger cronTrigger = TriggerBuilder.Create().WithIdentity("触发器名称4", "触发器组名").StartNow()
                 .WithCronSchedule("/10 * * ? * *").ForJob(simpleJob).Build();   //创建一个为任务“simpleJob”服务的Cron触发器，每隔10秒执行一次
@@ -93,7 +93,7 @@ namespace QuartzNetDemo
             IJobDetail calJob = JobBuilder.Create<SimpleJob>().WithIdentity("日历任务名称", "日历任务组名").Build();    //创建一个日历任务
 
             ITrigger calTrigger = TriggerBuilder.Create().WithIdentity("触发器名称", "触发器组名").StartNow()
-                .WithSchedule(CronScheduleBuilder.DailyAtHourAndMinute(9, 30)).ModifiedByCalendar(holiday).Build();  //每天上午9:30分执行，但新年的第1天不执行
+                .WithSchedule(CronScheduleBuilder.DailyAtHourAndMinute(14, 13)).ModifiedByCalendar(holiday).Build();  //每天上午9:30分执行，但新年的第1天不执行
 
             CurrentSched.ScheduleJob(calJob, calTrigger);
         }

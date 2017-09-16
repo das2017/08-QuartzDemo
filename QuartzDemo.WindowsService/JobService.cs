@@ -10,7 +10,7 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 
-namespace QuartzNetDemo.WindowsService
+namespace QuartzDemo.WindowsService
 {
     public partial class JobService : ServiceBase
     {

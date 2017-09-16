@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("QuartzNetDemo.WindowsService")]
+[assembly: AssemblyTitle("QuartzDemo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("QuartzNetDemo.WindowsService")]
+[assembly: AssemblyProduct("QuartzDemo")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("d38c42a7-cda8-47f3-97dc-4f5ae759a661")]
+[assembly: Guid("8dc52246-a828-4478-9e5a-04af423e99e7")]
 
 // 程序集的版本信息由下面四个值组成: 
 //

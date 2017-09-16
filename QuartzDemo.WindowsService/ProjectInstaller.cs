@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Configuration.Install;
 using System.Linq;
 
-namespace QuartzNetDemo.WindowsService
+namespace QuartzDemo.WindowsService
 {
     [RunInstaller(true)]
     public partial class ProjectInstaller : System.Configuration.Install.Installer

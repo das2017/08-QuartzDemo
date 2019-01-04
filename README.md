@@ -1,6 +1,6 @@
 # QuartzDemo
 
-## 第8章的Demo下载及更多资料：
+## 第8章的Demo下载及更多资料
 + WinJobDemo下载地址：https://github.com/das2017/QuartzDemo
 + HttpJobDemo下载地址：https://github.com/das2017/HttpJobDemo
 + Quartz.NET官网：http://www.quartz-scheduler.net/

@@ -1,4 +1,5 @@
 # QuartzDemo
+任务调度Job
 
 ## 第8章的Demo下载及更多资料
 + WinJobDemo下载地址：https://github.com/das2017/QuartzDemo
